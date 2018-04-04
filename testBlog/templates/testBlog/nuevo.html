@@ -1,0 +1,15 @@
+{% extends 'testBlog/base.html' %}
+{% block content %}
+{% if form %}
+<form action="{{target}}" method="post">
+  {% csrf_token %}
+  {% for field in form %}
+      <div class="form-group">
+          {{ field.errors }}
+          {{ field.label_tag }} {{ field }}
+      </div>
+  {% endfor %}
+<input type="submit" value="Enviar">
+</form>
+{% endif %}
+{% endblock %}
