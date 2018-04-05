@@ -11,12 +11,20 @@
 </html>
 
 <body>
-  <lu>
-    <li><a href="/">Inicio</a></li>
-    <li><a href="/nuevo">Nuevo artículo</a></li>
-  </lu>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color:black !important;">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" style="color:white !important;" href="/">Inicio </a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="/nuevo" style="color:white !important;">Nuevo Artículo</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-    <div class="content container">
+    <div class="container card" style="margin-top: 2%; padding: 30px;">
       {% block content %}
       {% endblock %}
     </div>

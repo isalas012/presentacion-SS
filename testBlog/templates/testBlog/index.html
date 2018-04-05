@@ -5,17 +5,19 @@
     <ul style="list-style-type: none;">
     {% for article in articles_list %}
         <li>
-          <div style="border: 1px solid black; margin-right: 10%; margin-left:10%; margin-bottom:1%;">
+          <div style="margin-bottom:1%;">
             <div style="width: 100%; font-weight: bold; font-size:20px">{{ article.title}}</div>
+            <hr>
             <a href="/ver/{{article.id}}" class="btn btn-primary">Ver</a>
             <a href="/eliminar/{{article.id}}" class="btn btn-danger">Eliminar</a>
             <a href="/autor/{{article.id}}" class="btn btn-success">Autor</a>
+            <hr  style="height:1px;border:none;color:#333;background-color:#333;">
 
           </div>
         </li>
     {% endfor %}
     </ul>
 {% else %}
-    <p>No articles are available.</p>
+    <p>No hay artículos</p>
 {% endif %}
 {% endblock %}

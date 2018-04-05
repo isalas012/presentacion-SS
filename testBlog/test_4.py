@@ -2,9 +2,9 @@ from django.test import TestCase
 from .models import article
 from django.core.exceptions import ValidationError
 
-class articleTest(TestCase):
+class articleFileTest(TestCase):
     def setUp(self):
-        print('--------------------------test4--------------------------')
+        print('\n--------------------------test4--------------------------\n')
         file = open("/home/nacho/Documents/SS/presentacion/testBlog/test.txt", 'r')
         for line in file:
             line = line.split('-')

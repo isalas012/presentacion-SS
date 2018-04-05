@@ -1,20 +1,20 @@
 {% extends 'testBlog/base.html' %}
 {% block content %}
-Titulo: {{obj.title}}
+<div style="width: 100%; font-size:40px">{{obj.title}}</div>
 <br>
-Contenido: {{obj.content}}
+{{obj.content}}
 <br>
-Autor: {{obj.author}}
+<div style="font-style: italic; align-self: right; font-size:15px">Autor: {{obj.author}}</div>
+<br style="margin-bottom: 20px;">
+<a href="/comentario/{{obj.id}}" class="btn btn-primary" style="margin: 0px 30% 0px">Nuevo comentario</a>
 <br>
-<a href="/comentario/{{obj.id}}" class="btn btn-primary">Nuevo comentario</a>
-<br>
-Comentario:
+Comentarios:
 <ul style="list-style-type: none;">
 {% for com in comments %}
     <li>
-      <div style="border: 1px solid black; margin-right: 10%; margin-left:10%; margin-bottom:1%;">
+      <div class="card" style="margin-bottom:1%; padding: 20px;">
         <div style="width: 100%; font-size:20px">{{ com.content}}</div>
-        <div style="font-size:10px">Autor: {{ com.author}}</div>
+        <div style="font-size:15px; font-style: italic;">Autor: {{ com.author}}</div>
       </div>
     </li>
 {% endfor %}
